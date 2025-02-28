@@ -7,6 +7,11 @@ resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool" {
   name               = "Autoscaler${var.pool_name}${count.index+1}"
   node_shape         = var.node_shape
 
+  initial_node_labels {
+    key   = "nodeType"
+    value = "autoscaling"
+  }
+
   # oke specific images
   dynamic "node_source_details" {
     for_each = var.node_pool_image_type == "oke" ? [1] : []
