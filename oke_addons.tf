@@ -50,7 +50,7 @@ resource "oci_containerengine_addon" "oke_cert_manager" {
   addon_name                       = "CertManager"
   cluster_id                       = oci_containerengine_cluster.fk_oke_cluster.id
   remove_addon_resources_on_delete = false
-  depends_on = [oci_containerengine_cluster]
+ 
 }
 
 resource "oci_containerengine_addon" "fh_oke_metricserver_addon" {
@@ -58,6 +58,6 @@ resource "oci_containerengine_addon" "fh_oke_metricserver_addon" {
     addon_name = "KubernetesMetricsServer"
     cluster_id = oci_containerengine_cluster.fk_oke_cluster.id
     remove_addon_resources_on_delete = false
-    depends_on = [oci_containerengine_cluster,oci_containerengine_addon.oke_cert_manager]
+    depends_on = [oci_containerengine_addon.oke_cert_manager]
 
 }
