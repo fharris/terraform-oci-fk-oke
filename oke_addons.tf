@@ -45,3 +45,11 @@ resource "oci_containerengine_addon" "fk_oke_autoscaler_addon" {
 
     remove_addon_resources_on_delete = true
 }
+
+resource "oci_containerengine_addon" "fh_oke_metricserver_addon" {
+    #Required
+    addon_name = "KubernetesMetricsServer"
+    cluster_id = oci_containerengine_cluster.fk_oke_cluster.id
+    remove_addon_resources_on_delete = true
+
+}
