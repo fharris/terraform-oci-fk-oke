@@ -19,16 +19,7 @@ resource "oci_containerengine_node_pool" "fk_oke_node_pool" {
       image_id = local.oke_specific_image_id
       source_type = data.oci_containerengine_node_pool_option.fk_oke_node_pool_option.sources[0].source_type
     }
-    preemptible_node_config {
-                #Required
-                preemption_action {
-                    #Required
-                    type = var.node_pool_node_config_details_placement_configs_preemptible_node_config_preemption_action_type
 
-                    #Optional
-                    #is_preserve_boot_volume = var.node_pool_node_config_details_placement_configs_preemptible_node_config_preemption_action_is_preserve_boot_volume
-                }
-            }
   }
 
   # oci platform images
