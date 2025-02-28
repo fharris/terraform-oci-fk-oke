@@ -67,7 +67,7 @@ variable "pods_nsg_ids" {
 }
 
 variable "oke_cluster_name" {
-  default = "FoggyKitchenOKECluster"
+  default = "TFOKECluster"
 }
 
 variable "vcn_native" {
@@ -91,7 +91,7 @@ variable "k8s_version" {
 }
 
 variable "pool_name" {
-  default = "FoggyKitchenNodePool"
+  default = "TFNodePool1"
 }
 
 variable "node_shape" {
@@ -107,11 +107,11 @@ variable "node_pool_boot_volume_size_in_gbs" {
 }
 
 variable "node_ocpus" {
-  default = 1
+  default = 2
 }
 
 variable "node_memory" {
-  default = 4
+  default = 16
 }
 
 variable "oci_vcn_ip_native" {
