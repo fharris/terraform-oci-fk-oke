@@ -1,4 +1,4 @@
-resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_ad2" {
+resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_ad3" {
   depends_on         = [oci_containerengine_node_pool.fk_oke_node_pool]
   count              = var.virtual_node_pool ? 0 : var.autoscaler_enabled ? var.autoscaler_node_pool_count : 0
   cluster_id         = oci_containerengine_cluster.fk_oke_cluster.id
