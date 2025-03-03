@@ -73,7 +73,8 @@ resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_x" {
       }
       
     }
-    size = var.node_count
+    #size = var.node_count
+     size = 1
    # defined_tags  = { "oke.pool" = "autoscaler" }
 
     dynamic "node_pool_pod_network_option_details" {
