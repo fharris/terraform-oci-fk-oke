@@ -4,7 +4,7 @@ resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_x" {
   cluster_id         = oci_containerengine_cluster.fk_oke_cluster.id
   compartment_id     = var.compartment_ocid
   kubernetes_version = var.k8s_version
-  name               = "Autoscaler${var.pool_name}${count.index+1}"
+  name               = "Autoscaler_x${var.pool_name}${count.index+1}"
   node_shape         = var.node_shape
 
   initial_node_labels {
@@ -56,7 +56,8 @@ resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_x" {
       iterator = pc_iter
       for_each = local.availability_domains #data.oci_identity_availability_domains.ADs.availability_domains
       content {
-        availability_domain = pc_iter.value.name        
+        availability_domain = pc_iter.value.name
+        availability_domain = "Vihs:EU-FRANKFURT-1-AD-3"
         subnet_id           = var.use_existing_vcn ? var.nodepool_subnet_id : oci_core_subnet.fk_oke_nodepool_subnet[0].id
         preemptible_node_config {
                 #Required
