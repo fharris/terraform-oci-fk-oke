@@ -94,7 +94,7 @@ variable "k8s_version" {
 
 variable "pool_name" {
   // We recommend that you always have at least one node pool in a cluster that is not managed by the Kubernetes Cluster Autoscaler. This node pool is required to run critical cluster add-ons. 
-  default = "System_NodePool_AD1_AD2_AD3"
+  default = "System_NodePool"
 }
 
 variable "node_shape" {
