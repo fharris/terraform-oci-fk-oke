@@ -56,7 +56,7 @@ resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_x" {
       iterator = pc_iter
       for_each = local.availability_domains #data.oci_identity_availability_domains.ADs.availability_domains
       content {
-        availability_domain = pc_iter.value.name
+        #availability_domain = pc_iter.value.name
         availability_domain = "Vihs:EU-FRANKFURT-1-AD-3"
         subnet_id           = var.use_existing_vcn ? var.nodepool_subnet_id : oci_core_subnet.fk_oke_nodepool_subnet[0].id
         preemptible_node_config {
