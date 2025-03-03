@@ -26,10 +26,10 @@ variable "node_pool_size" {
 }
 
 variable "min_number_of_nodes" {
-  default = 3
+  default = 1
 }
 
 variable "max_number_of_nodes" {
-  default = 5
+  default = 10
 }
 
