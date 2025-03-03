@@ -4,7 +4,7 @@ resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_ad1" {
   cluster_id         = oci_containerengine_cluster.fk_oke_cluster.id
   compartment_id     = var.compartment_ocid
   kubernetes_version = var.k8s_version
-  name               = "Autoscaler${var.pool_name}${count.index+1}"
+  name               = "Autoscaler_NodePool_AD1"
   node_shape         = var.node_shape
 
   initial_node_labels {
