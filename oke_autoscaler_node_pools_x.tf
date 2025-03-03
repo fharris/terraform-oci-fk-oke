@@ -13,11 +13,11 @@ resource "oci_containerengine_node_pool" "fk_oke_autoscaler_node_pool_x" {
   }
 
   // ask TF to ignore specific changes in the case of a re-run
-  lifecycle {
-    ignore_changes = [
-      node_config_details.size
-    ]
-  }
+  #lifecycle {
+  #  ignore_changes = [
+  #    node_config_details.size
+  #  ]
+  #}
 
   # oke specific images
   dynamic "node_source_details" {
