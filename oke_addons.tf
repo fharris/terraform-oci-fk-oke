@@ -43,6 +43,12 @@ resource "oci_containerengine_addon" "fk_oke_autoscaler_addon" {
      }
     }
 
+    configurations {
+      // The number of replicas of the add-on deployment.
+      key = "numOfReplicas"
+      value = 3
+    }  
+
     remove_addon_resources_on_delete = true
 }
 
