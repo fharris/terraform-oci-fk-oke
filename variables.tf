@@ -153,6 +153,10 @@ variable "node_count" {
   default = 3
 }
 
+variable "autoscaler_node_count" {
+  default = 3
+}
+
 variable "autoscaler_enabled" {
   default = false
 }
