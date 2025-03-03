@@ -22,12 +22,8 @@ resource "oci_containerengine_addon" "fk_oke_autoscaler_addon" {
 
     configurations {
       key = "nodes"
-      value = join("", [var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool[0].id])
-    }
-
-     configurations {
-      key = "nodes"
-      value = join("", [var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool_1[0].id])
+      value = join("", [var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool[0].id],
+[var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool_1[0].id])
     }
 
     configurations {
