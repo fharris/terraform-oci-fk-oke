@@ -49,6 +49,12 @@ resource "oci_containerengine_addon" "fk_oke_autoscaler_addon" {
       value = 3
     }  
 
+    configurations {
+      // The number of replicas of the add-on deployment.
+      key = "maxNodeProvisionTime"
+      value = var.autoscaler_scale_down_unneeded_time
+    }  
+
     remove_addon_resources_on_delete = true
 }
 
