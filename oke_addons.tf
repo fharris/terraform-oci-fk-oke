@@ -20,27 +20,10 @@ resource "oci_containerengine_addon" "fk_oke_autoscaler_addon" {
     addon_name = "ClusterAutoscaler"
     cluster_id = oci_containerengine_cluster.fk_oke_cluster.id
 
-    variable "env_name" {
-        description = "Environment name"
-        type        = string
-        default     = "staging"
-    }
-
-    data "null_data_source" "api_gw_url" {
-      inputs = {
-        main_api_gw = join(".", ["app.api", var.env_name == "prod" ? "" : var.env_name, "mydomain.com"])
-      }
-    }
-
-    output "api_gateway_url" {
-      value = data.null_data_source.api_gw_url.inputs.main_api_gw
-    }
-
     configurations {
       key = "nodes"
       #value = join("", [var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool[0].id])
-      value = join("", [var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool[0].id])
-      #value = join(", ",[node1_autoscaler_config])
+      value = join("", [var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool[0].id," ",var.autoscaler_min_number_of_nodes,":",var.autoscaler_max_number_of_nodes,":",oci_containerengine_node_pool.fk_oke_autoscaler_node_pool_ad2[0].id])
     }
 
 
