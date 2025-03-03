@@ -60,10 +60,21 @@ resource "oci_containerengine_addon" "oke_cert_manager" {
 }
 
 resource "oci_containerengine_addon" "fh_oke_metricserver_addon" {
+
+    
     #Required
     addon_name = "KubernetesMetricsServer"
     cluster_id = oci_containerengine_cluster.fk_oke_cluster.id
+
+     configurations {
+      // The number of replicas of the add-on deployment.
+      key = "numOfReplicas"
+      value = 3
+    }  
+
     remove_addon_resources_on_delete = false
+    
+
     depends_on = [oci_containerengine_addon.oke_cert_manager]
 
 }
