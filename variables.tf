@@ -35,7 +35,9 @@ variable "nodepool_subnet_id" {
 }
 
 variable "nodepool_subnet_cidr" {
-  default = "10.0.1.0/24"
+  // https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengbestpractices_topic-Networking-best-practices.htm#contengbestpractices_topic-Networking-best-practices__Networking-Plannumberofnodes
+  // When using the flannel CNI plugin, clusters created by Kubernetes Engine reserve a /25 range for pods from the flannel overlay network, and allow up to 110 pods per node
+  default = "10.0.1.0/24" 
 }
 
 variable "lb_subnet_id" {
