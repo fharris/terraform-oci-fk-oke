@@ -154,7 +154,7 @@ variable "node_count" {
 }
 
 variable "autoscaler_node_count" {
-  default = 3
+  default = 1
 }
 
 variable "autoscaler_enabled" {
