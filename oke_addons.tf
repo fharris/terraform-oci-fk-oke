@@ -50,7 +50,7 @@ resource "oci_containerengine_addon" "fk_oke_autoscaler_addon" {
     }  
 
     configurations {
-      // The number of replicas of the add-on deployment.
+      // Max time to provision nodes 
       key = "maxNodeProvisionTime"
       value = var.autoscaler_maxNodeProvisionTime
     }  
