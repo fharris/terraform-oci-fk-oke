@@ -181,6 +181,14 @@ variable "autoscaler_max_number_of_nodes" {
   default = 10
 }
 
+variable "maxNodeProvisionTime" {
+  // https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengusingclusterautoscaler.htm#Using_the_Kubernetes_Cluster_Autoscaler__CA_recommendations
+  // Set max-node-provision-time to 25 minutes. Typically, new worker nodes are provisioned and move to the Ready condition in significantly less time than this. 
+  // However, when many nodes are added to a node pool at the same time, it can take longer to provision them. Note that the Console displays a warning beside worker nodes that take more than 20 minutes to initialize. 
+  // Assuming worker nodes move to the Ready condition within the time you specify for max-node-provision-time, you can ignore the warning.
+  default = 25
+}
+
 variable "node_pool_image_type" {
   default = "oke"
 }
