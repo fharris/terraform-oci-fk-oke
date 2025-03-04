@@ -190,7 +190,7 @@ variable "autoscaler_maxNodeProvisionTime" {
   // Set max-node-provision-time to 25 minutes. Typically, new worker nodes are provisioned and move to the Ready condition in significantly less time than this. 
   // However, when many nodes are added to a node pool at the same time, it can take longer to provision them. Note that the Console displays a warning beside worker nodes that take more than 20 minutes to initialize. 
   // Assuming worker nodes move to the Ready condition within the time you specify for max-node-provision-time, you can ignore the warning.
-  default = 25
+  default = "25m"
 }
 
 variable "node_pool_image_type" {
