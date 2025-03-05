@@ -155,7 +155,7 @@ variable "node_count" {
 }
 
 variable "autoscaler_node_count" {
-  default = 1
+  default = 3
 }
 
 variable "autoscaler_enabled" {
@@ -175,7 +175,7 @@ variable "autoscaler_scale_down_unneeded_time" {
 }
 
 variable "autoscaler_node_pool_count" {
-  default = 3
+  default = 1
 }
 
 variable "autoscaler_min_number_of_nodes" {
@@ -183,7 +183,7 @@ variable "autoscaler_min_number_of_nodes" {
 }
 
 variable "autoscaler_max_number_of_nodes" {
-  default = 5
+  default = 10
 }
 
 variable "autoscaler_maxNodeProvisionTime" {
