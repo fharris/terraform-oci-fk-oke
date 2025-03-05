@@ -179,11 +179,11 @@ variable "autoscaler_node_pool_count" {
 }
 
 variable "autoscaler_min_number_of_nodes" {
-  default = 1
+  default = 3
 }
 
 variable "autoscaler_max_number_of_nodes" {
-  default = 10
+  default = 5
 }
 
 variable "autoscaler_maxNodeProvisionTime" {
