@@ -93,7 +93,8 @@ variable "k8s_version" {
 }
 
 variable "pool_name" {
-  // We recommend that you always have at least one node pool in a cluster that is not managed by the Kubernetes Cluster Autoscaler. This node pool is required to run critical cluster add-ons. 
+  // We recommend that you always have at least one node pool in a cluster that is not managed by the Kubernetes Cluster Autoscaler.
+  // This node pool is required to run critical cluster add-ons. 
   default = "System_NodePool"
 }
 
@@ -158,7 +159,7 @@ variable "autoscaler_node_count" {
 }
 
 variable "autoscaler_enabled" {
-  default = false
+  default = true
 }
 
 variable "autoscaler_authtype_workload" {
