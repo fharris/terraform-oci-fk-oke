@@ -174,7 +174,7 @@ variable "autoscaler_scale_down_unneeded_time" {
 }
 
 variable "autoscaler_node_pool_count" {
-  default = 1
+  default = 3
 }
 
 variable "autoscaler_min_number_of_nodes" {
