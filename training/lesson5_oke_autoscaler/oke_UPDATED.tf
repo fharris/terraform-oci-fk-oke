@@ -9,7 +9,7 @@ module "fk-oke" {
   node_pool_count                       = 1
   node_count                            = var.node_pool_size
   node_linux_version                    = var.node_linux_version
-  oci_vcn_ip_native                     = true
+  oci_vcn_ip_native                     = false
   use_existing_vcn                      = false
   is_api_endpoint_subnet_public         = true # OKE API Endpoint will be public (Internet facing)
   is_lb_subnet_public                   = true # OKE LoadBalanacer will be public (Internet facing)
