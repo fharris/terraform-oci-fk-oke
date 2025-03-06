@@ -99,7 +99,7 @@ variable "pool_name" {
 }
 
 variable "node_shape" {
-  default = "VM.Standard.E4.Flex"
+  default = "VM.Standard.E5.Flex"
 }
 
 variable "node_pool_image_id" {
