@@ -102,6 +102,13 @@ variable "node_shape" {
   default = "VM.Standard.E5.Flex"
 }
 
+variable "autoscaler_node_shape" {
+  default = "VM.Standard.E3.Flex"
+}
+
+
+
+
 variable "node_pool_image_id" {
   default = ""
 }
