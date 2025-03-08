@@ -129,7 +129,8 @@ variable "oci_vcn_ip_native" {
   default = false
 }
 
-variable "max_pods_per_node" {
+variable "max_pods_per_node" { 
+  //if not flannel TBC FH
   default = 10
 }
 
