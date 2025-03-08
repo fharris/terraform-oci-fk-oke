@@ -142,14 +142,14 @@ variable "pods_cidr" {
 
 variable "services_cidr" {
   //default = "10.2.0.0/16"
-  default = "10.74.6.0/23" //128 hosts from 10.74.64.1 - 10.74.64.126 /16 !? FH
+  default = "10.74.16.0/21" //128 hosts from 10.74.64.1 - 10.74.64.126 /16 !? FH
 }
 
 variable "pods_subnet_cidr" { //TBC only if not using Flannel TBC FH 
    // https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengbestpractices_topic-Networking-best-practices.htm#contengbestpractices_topic-Networking-best-practices__Networking-Plannumberofnodes
   // When using the flannel CNI plugin, clusters created by Kubernetes Engine reserve a /25 range for pods from the flannel overlay network, and allow up to 110 pods per node
   //default = "10.0.4.0/24"
-  default = "10.74.8.0/22"
+  default = "10.74.24.0/21"
 }
 
 variable "virtual_node_pool" {
