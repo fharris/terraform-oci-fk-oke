@@ -201,7 +201,7 @@ variable "autoscaler_max_number_of_nodes" {
   default = 100
 }
 
-variable "autoscaler_delete_skipNodesWithSystemPods"{
+variable "autoscaler_skipNodesWithSystemPods"{
   //false willenforcing cluster autoscaler to delete nodes with kube-system pods (except for DaemonSet or mirror pods).
   default = false
 }
