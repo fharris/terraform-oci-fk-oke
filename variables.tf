@@ -201,6 +201,11 @@ variable "autoscaler_max_number_of_nodes" {
   default = 100
 }
 
+variable "autoscaler_delete_skipNodesWithSystemPods"{
+  //false willenforcing cluster autoscaler to delete nodes with kube-system pods (except for DaemonSet or mirror pods).
+  default = false
+}
+
 variable "autoscaler_maxNodeProvisionTime" {
   // https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengusingclusterautoscaler.htm#Using_the_Kubernetes_Cluster_Autoscaler__CA_recommendations
   // Set max-node-provision-time to 25 minutes. Typically, new worker nodes are provisioned and move to the Ready condition in significantly less time than this. 
