@@ -57,6 +57,12 @@ resource "oci_containerengine_addon" "fk_oke_autoscaler_addon" {
       value = var.autoscaler_maxNodeProvisionTime
     }  
 
+    configurations {
+      // Max time to provision nodes 
+      key = "skipNodesWithSystemPods"
+      value = var.autoscaler_skipNodesWithSystemPods
+    }  
+
     remove_addon_resources_on_delete = true
 }
 
