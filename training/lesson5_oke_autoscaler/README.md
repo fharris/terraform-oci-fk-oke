@@ -28,7 +28,7 @@ In this lesson we explore the creation of an OKE Enhanced Cluster with the Autos
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/fharris/terraform-oci-fk-oke/releases/latest/download/lesson5_oke_autoscaler.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/fharris/terraform-oci-fk-oke/releases/latest/download/my-autoscaler-oke.zip)
 
 
 
