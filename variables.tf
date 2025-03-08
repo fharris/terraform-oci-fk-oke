@@ -142,7 +142,7 @@ variable "pods_cidr" {
 
 variable "services_cidr" {
   //default = "10.2.0.0/16"
-  default = "10.74.5.0/25" //128 hosts from 10.74.64.1 - 10.74.64.126 /16 !? FH
+  default = "10.74.5.0/21" //128 hosts from 10.74.64.1 - 10.74.64.126 /16 !? FH
 }
 
 variable "pods_subnet_cidr" { //TBC only if not using Flannel TBC FH 
