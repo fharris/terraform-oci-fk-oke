@@ -198,7 +198,7 @@ variable "autoscaler_min_number_of_nodes" {
 }
 
 variable "autoscaler_max_number_of_nodes" {
-  default = 50
+  default = 100
 }
 
 variable "autoscaler_maxNodeProvisionTime" {
