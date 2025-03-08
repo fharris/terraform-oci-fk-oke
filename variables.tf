@@ -71,7 +71,7 @@ variable "pods_nsg_ids" {
 }
 
 variable "oke_cluster_name" {
-  default = "TFOKECluster"
+  default = "MyTFOKECluster"
 }
 
 variable "vcn_native" {
