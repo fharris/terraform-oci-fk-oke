@@ -198,7 +198,7 @@ variable "autoscaler_min_number_of_nodes" {
 }
 
 variable "autoscaler_max_number_of_nodes" {
-  default = 100
+  default = 200
 }
 
 variable "autoscaler_skipNodesWithSystemPods"{
